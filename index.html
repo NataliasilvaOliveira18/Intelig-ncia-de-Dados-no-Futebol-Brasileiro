@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Projeto acadêmico de Business Intelligence e GIS sobre os principais times de futebol do Brasil.">
+    <title>FutebolBR | Inteligência de Dados & GIS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="container navegacao">
+            <a href="#" class="logo">
+                <span class="constelacao-mini" aria-hidden="true"></span>
+                FUTEBOL<span>BR</span>
+            </a>
+
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#destaque-cruzeiro">Cruzeiro & Comparador</a>
+                <a href="#explorador">Base de Dados</a>
+                <a href="#mapa">Mapa GIS</a>
+                <a href="#dashboard">Power BI</a>
+                <a href="#integrantes">Equipe</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-glow"></div>
+            <div class="hero-conteudo container">
+                <div class="badge-cruzeiro">
+                    <span class="estrelas-badge">★ ★ ★ ★ ★</span> PROJETO ACADÊMICO • BI & GIS
+                </div>
+
+                <h1>Inteligência de Dados<br>no <span>Futebol Brasileiro</span></h1>
+
+                <p>
+                    Uma plataforma interativa que integra análise espacial no ArcGIS e
+                    indicadores de Business Intelligence no Power BI sobre 20 clubes do Brasil.
+                </p>
+
+                <div class="hero-botoes">
+                    <a href="#dashboard" class="botao botao-principal">
+                        Acessar Painel Power BI ↓
+                    </a>
+                    <a href="#explorador" class="botao botao-secundario">
+                        Explorar os 20 Clubes
+                    </a>
+                </div>
+
+                <!-- FAIXA RÁPIDA DE KPIs NO HERO -->
+                <div class="hero-kpis">
+                    <div class="hero-kpi-item">
+                        <strong class="contador" data-alvo="20">0</strong>
+                        <span>Clubes mapeados</span>
+                    </div>
+                    <div class="hero-kpi-item">
+                        <strong><span class="contador" data-alvo="164">0</span> Mi</strong>
+                        <span>Torcedores totais</span>
+                    </div>
+                    <div class="hero-kpi-item">
+                        <strong><span class="contador" data-alvo="123">0</span> Mil</strong>
+                        <span>Sócios-torcedores (Top)</span>
+                    </div>
+                    <div class="hero-kpi-item">
+                        <strong class="contador" data-alvo="163">0</strong>
+                        <span>Títulos Nacionais + Int.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE E METODOLOGIA -->
+        <section id="sobre" class="secao container reveal">
+            <div class="titulo-secao">
+                <span class="subtitulo">ESCOPO E METODOLOGIA</span>
+                <h2>Sobre o projeto</h2>
+            </div>
+
+            <div class="sobre-grid">
+                <div class="sobre-texto">
+                    <p class="descricao">
+                        O projeto reúne, estrutura e analisa indicadores estratégicos de
+                        <strong>20 clubes do futebol brasileiro</strong>, conectando localização geográfica
+                        de Centros de Treinamento e estádios no <strong>ArcGIS</strong> com análises
+                        multidimensionais no <strong>Power BI</strong>.
+                    </p>
+                    <p class="descricao">
+                        Foram levantadas variáveis de tamanho de torcida, quadro de sócios-torcedores,
+                        títulos brasileiros e internacionais, capacidade de estádios, década de fundação,
+                        competição atual e modelo de gestão (Clube Associativo vs. SAF). O projeto permite compreender
+                        melhor aspectos relacionados à estrutura, à popularidade, à história e à gestão das equipes do
+                        futebol brasileiro. A integração entre ArcGIS e
+                        Power BI demonstra como diferentes ferramentas tecnológicas podem ser utilizadas em conjunto
+                        para organizar, visualizar e interpretar grandes conjuntos de informações.
+                    </p>
+                </div>
+
+                <div class="pilares-grid">
+                    <div class="pilar-card">
+                        <span class="pilar-tag">01 • GIS</span>
+                        <h3>Georreferenciamento</h3>
+                        <p>Mapeamento via latitude/longitude dos CTs no ArcGIS Instant Apps.</p>
+                    </div>
+                    <div class="pilar-card">
+                        <span class="pilar-tag">02 • BI</span>
+                        <h3>Visualização Analítica</h3>
+                        <p>Painel interativo no Power BI com rankings, proporção SAF e filtros.</p>
+                    </div>
+                    <div class="pilar-card">
+                        <span class="pilar-tag">03 • DADOS</span>
+                        <h3>Base Padronizada</h3>
+                        <p>14 atributos consolidados por clube para cruzamento estatístico.</p>
+                    </div>
+                    <div class="pilar-card">
+                        <span class="pilar-tag">04 • WEB</span>
+                        <h3>Portal Interativo</h3>
+                        <p>Centralização dos artefatos com explorador dinâmico dos indicadores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESTAQUE CRUZEIRO + COMPARADOR INTERATIVO -->
+        <section id="destaque-cruzeiro" class="secao secao-azul reveal">
+            <div class="container">
+                <div class="cruzeiro-layout">
+
+                    <!-- LADO ESQUERDO: PAINEL CRUZEIRO -->
+                    <div class="cruzeiro-info">
+                        <div class="cruzeiro-topo">
+                            <span class="subtitulo-claro">ESTUDO DE CASO • CLUBE DO GRUPO</span>
+                            <div class="constelacao" title="Cruzeiro do Sul">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+
+                        <h2>Cruzeiro Esporte Clube</h2>
+                        <p class="cruzeiro-desc">
+                            Fundado na década de 1920 e operando no modelo <strong>SAF</strong> na Série A,
+                            o Cruzeiro figura entre os 6 maiores clubes da base em torcida e sócios, além
+                            de estar no Top 4 nacional em conquistas brasileiras e capacidade de estádio.
+                        </p>
+
+                        <div class="cruzeiro-grid-stats">
+                            <div class="stat-box">
+                                <strong>8,5 Mi</strong>
+                                <span>Torcedores (6º na base)</span>
+                            </div>
+                            <div class="stat-box">
+                                <strong>88.096</strong>
+                                <span>Sócios-torcedores</span>
+                            </div>
+                            <div class="stat-box">
+                                <strong>17 Títulos</strong>
+                                <span>10 Nacionais + 7 Int.</span>
+                            </div>
+                            <div class="stat-box">
+                                <strong>61.846</strong>
+                                <span>Capacidade do Mineirão</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LADO DIREITO: COMPARADOR DINÂMICO -->
+                    <div class="comparador-card">
+                        <div class="comparador-header">
+                            <div>
+                                <span class="comp-tag">SIMULADOR INTERATIVO</span>
+                                <h3>Comparar Cruzeiro vs.</h3>
+                            </div>
+                            <select id="select-rival" aria-label="Escolha um clube para comparar com o Cruzeiro">
+                                <option value="Flamengo">Flamengo</option>
+                                <option value="Palmeiras">Palmeiras</option>
+                                <option value="Corinthians">Corinthians</option>
+                                <option value="São Paulo">São Paulo</option>
+                                <option value="Grêmio">Grêmio</option>
+                                <option value="Internacional">Internacional</option>
+                                <option value="Santos">Santos</option>
+                                <option value="Botafogo">Botafogo</option>
+                                <option value="Vasco da Gama">Vasco da Gama</option>
+                                <option value="Fluminense">Fluminense</option>
+                                <option value="Bahia">Bahia</option>
+                                <option value="Athletico Paranaense">Athletico Paranaense</option>
+                            </select>
+                        </div>
+
+                        <div id="comparador-resultado" class="comparador-barras">
+                            <!-- Preenchido dinamicamente via JavaScript -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPLORADOR DINÂMICO DOS 20 CLUBES -->
+        <section id="explorador" class="secao container reveal">
+            <div class="titulo-secao">
+                <span class="subtitulo">DADOS REAIS DA PLANILHA</span>
+                <h2>Explorador dos 20 Clubes</h2>
+                <p>Filtre por modelo de gestão (SAF), busca por nome ou ordene pelos indicadores da base.</p>
+            </div>
+
+            <div class="controles-tabela">
+                <input type="text" id="busca-clube"
+                    placeholder="🔍 Buscar clube ou rival (ex: Cruzeiro, Flamengo, Série B)..."
+                    aria-label="Buscar clube">
+
+                <div class="filtros-grupo">
+                    <button class="filtro-btn ativo" data-filtro="todos">Todos (20)</button>
+                    <button class="filtro-btn" data-filtro="saf-sim">Apenas SAF (6)</button>
+                    <button class="filtro-btn" data-filtro="saf-nao">Não SAF (14)</button>
+                </div>
+
+                <select id="ordenar-clubes" aria-label="Ordenar clubes por">
+                    <option value="torcida">Ordenar: Maior Torcida</option>
+                    <option value="socios">Ordenar: Mais Sócios-Torcedores</option>
+                    <option value="titulos">Ordenar: Total de Títulos</option>
+                    <option value="estadio">Ordenar: Capacidade do Estádio</option>
+                </select>
+            </div>
+
+            <div class="tabela-wrapper">
+                <table class="tabela-clubes">
+                    <thead>
+                        <tr>
+                            <th>Clube</th>
+                            <th>Torcida</th>
+                            <th>Sócios</th>
+                            <th>Títulos (BR / Int)</th>
+                            <th>Estádio (Cap.)</th>
+                            <th>Gestão</th>
+                            <th>Rival</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpo-tabela">
+                        <!-- Preenchido dinamicamente via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- MAPA GEOGRÁFICO ARCGIS -->
+        <section id="mapa" class="secao secao-clara reveal">
+            <div class="container">
+                <div class="titulo-secao">
+                    <span class="subtitulo">SISTEMAS DE INFORMAÇÃO GEOGRÁFICA</span>
+                    <h2>Mapa Geográfico Interativo</h2>
+                    <p>Visualização espacial desenvolvida no ArcGIS com localização dos CTs e indicadores dos clubes.
+                    </p>
+                </div>
+
+                <div class="recurso-card">
+                    <div class="iframe-container">
+                        <iframe
+                            src="https://www.arcgis.com/apps/instant/atlas/index.html?appid=9bb03425db9e4733989c82533e44923c&webmap=86e4842d5fd34b0a93c19c4e2adf7976"
+                            title="Mapa Geográfico - Times de Futebol do Brasil" loading="lazy" allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <div class="recurso-rodape">
+                        <div>
+                            <h3>Aplicação ArcGIS Instant Apps</h3>
+                            <p>Interaja diretamente com o mapa acima ou abra em uma nova guia.</p>
+                        </div>
+
+                        <a href="https://www.arcgis.com/apps/instant/atlas/index.html?appid=9bb03425db9e4733989c82533e44923c&webmap=86e4842d5fd34b0a93c19c4e2adf7976"
+                            target="_blank" rel="noopener noreferrer" class="botao botao-principal">
+                            Abrir mapa em tela cheia ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DASHBOARD POWER BI -->
+        <section id="dashboard" class="secao container reveal">
+            <div class="titulo-secao">
+                <span class="subtitulo">BUSINESS INTELLIGENCE</span>
+                <h2>Painel de Indicadores — Power BI</h2>
+            </div>
+
+            <div class="recurso">
+                <div class="recurso-icone">📊</div>
+
+                <div class="recurso-conteudo">
+                    <h3>Dashboard — Times de Futebol do Brasil 2026</h3>
+
+                    <p>
+                        Painel analítico desenvolvido no Microsoft Power BI contendo
+                        <strong>cartões de indicadores gerais</strong>, <strong>gráficos comparativos</strong>
+                        (torcidas, sócios-torcedores, títulos, capacidade de estádios, década de fundação e
+                        distribuição SAF), <strong>mapa geográfico</strong> e segmentadores dinâmicos.
+                    </p>
+
+                    <a href="https://app.powerbi.com/links/0M2BBGraD5?ctid=5e2a8164-87b6-430b-ac6b-08d6229e7059&pbi_source=linkShare"
+                        target="_blank" rel="noopener noreferrer" class="botao botao-principal">
+                        Acessar Dashboard no Power BI ↗
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTEGRANTES -->
+        <section id="integrantes" class="secao secao-clara reveal">
+            <div class="container">
+                <div class="titulo-secao">
+                    <span class="subtitulo">EQUIPE DO PROJETO</span>
+                    <h2>Integrantes</h2>
+                    <p>Desenvolvido pelos alunos:</p>
+                </div>
+
+                <div class="equipe">
+                    <div class="integrante">
+                        <div class="avatar">NS</div>
+                        <h3>Natália Silva Oliveira</h3>
+                        <span>Sistemas de Informação</span>
+                    </div>
+
+                    <div class="integrante">
+                        <div class="avatar">MC</div>
+                        <h3>Milena Carlos da Silva</h3>
+                        <span>Sistemas de Informação</span>
+                    </div>
+
+                    <div class="integrante">
+                        <div class="avatar">GF</div>
+                        <h3>Guilherme Setragni Freitas</h3>
+                        <span>Sistemas de Informação</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container rodape">
+            <a href="#" class="logo"><span class="constelacao-mini"></span> FUTEBOL<span>BR</span></a>
+            <p>Projeto Acadêmico - Business Intelligence & Sistemas de Informação Geográfica</p>
+            <p>2026</p>
+        </div>
+    </footer>
+
+    <!-- DADOS REAIS DA PLANILHA + INTERATIVIDADE -->
+    <script>
+        const clubes = [
+            { nome: "Flamengo", torcida: 42000000, socios: 118000, br: 13, intl: 8, estadio: 78838, serie: "Série A", saf: "Não", decada: 1890, rival: "Vasco da Gama" },
+            { nome: "Corinthians", torcida: 30400000, socios: 118595, br: 11, intl: 4, estadio: 47771, serie: "Série A", saf: "Não", decada: 1910, rival: "Palmeiras" },
+            { nome: "São Paulo", torcida: 17000000, socios: 57000, br: 7, intl: 12, estadio: 66795, serie: "Série A", saf: "Não", decada: 1930, rival: "Corinthians" },
+            { nome: "Palmeiras", torcida: 15300000, socios: 167909, br: 16, intl: 5, estadio: 43713, serie: "Série A", saf: "Não", decada: 1910, rival: "Corinthians" },
+            { nome: "Grêmio", torcida: 9800000, socios: 101651, br: 7, intl: 6, estadio: 55662, serie: "Série A", saf: "Não", decada: 1900, rival: "Internacional" },
+            { nome: "Cruzeiro", torcida: 8500000, socios: 88096, br: 10, intl: 7, estadio: 61846, serie: "Série A", saf: "Sim", decada: 1920, rival: "Atlético Mineiro" },
+            { nome: "Vasco da Gama", torcida: 8500000, socios: 67739, br: 5, intl: 3, estadio: 21880, serie: "Série A", saf: "Sim", decada: 1890, rival: "Flamengo" },
+            { nome: "Internacional", torcida: 7500000, socios: 108809, br: 4, intl: 6, estadio: 50128, serie: "Série A", saf: "Não", decada: 1900, rival: "Grêmio" },
+            { nome: "Santos", torcida: 6000000, socios: 57836, br: 9, intl: 8, estadio: 16061, serie: "Série A", saf: "Não", decada: 1910, rival: "Palmeiras" },
+            { nome: "Botafogo", torcida: 4200000, socios: 80626, br: 3, intl: 2, estadio: 44661, serie: "Série A", saf: "Sim", decada: 1900, rival: "Flamengo" },
+            { nome: "Fluminense", torcida: 3600000, socios: 40061, br: 5, intl: 2, estadio: 78838, serie: "Série A", saf: "Não", decada: 1900, rival: "Flamengo" },
+            { nome: "Bahia", torcida: 3400000, socios: 76000, br: 2, intl: 0, estadio: 48902, serie: "Série A", saf: "Sim", decada: 1930, rival: "Vitória" },
+            { nome: "Vitória", torcida: 2500000, socios: 43298, br: 0, intl: 0, estadio: 30793, serie: "Série A", saf: "Não", decada: 1890, rival: "Bahia" },
+            { nome: "Remo", torcida: 1300000, socios: 6079, br: 0, intl: 0, estadio: 13792, serie: "Série A", saf: "Não", decada: 1900, rival: "Paysandu" },
+            { nome: "Athletico Paranaense", torcida: 1200000, socios: 33000, br: 2, intl: 2, estadio: 42372, serie: "Série A", saf: "Sim", decada: 1920, rival: "Coritiba" },
+            { nome: "Coritiba", torcida: 1100000, socios: 35000, br: 1, intl: 0, estadio: 40502, serie: "Série A", saf: "Sim", decada: 1900, rival: "Athletico-PR" },
+            { nome: "Red Bull Bragantino", torcida: 500000, socios: 10000, br: 0, intl: 0, estadio: 15010, serie: "Série A", saf: "Não", decada: 1920, rival: "Ponte Preta" },
+            { nome: "Juventude", torcida: 311000, socios: 7683, br: 2, intl: 0, estadio: 19924, serie: "Série B", saf: "Não", decada: 1910, rival: "Caxias" },
+            { nome: "Chapecoense", torcida: 300000, socios: 10000, br: 0, intl: 1, estadio: 20089, serie: "Série A", saf: "Não", decada: 1970, rival: "Criciúma" },
+            { nome: "Mirassol", torcida: 100000, socios: 6500, br: 0, intl: 0, estadio: 15000, serie: "Série A", saf: "Não", decada: 1920, rival: "Novorizontino" }
+        ];
+
+        const formatarMilhoes = (n) => n >= 1000000 ? (n / 1000000).toFixed(1).replace('.0', '') + ' Mi' : (n / 1000).toFixed(0) + ' mil';
+        const formatarNumero = (n) => n.toLocaleString('pt-BR');
+
+        // 1. RENDERIZAR TABELA INTERATIVA
+        const corpoTabela = document.getElementById('corpo-tabela');
+        const inputBusca = document.getElementById('busca-clube');
+        const selectOrdem = document.getElementById('ordenar-clubes');
+        const botoesFiltro = document.querySelectorAll('.filtro-btn');
+        let filtroAtual = 'todos';
+
+        function renderizarTabela() {
+            const termo = inputBusca.value.toLowerCase().trim();
+            const ordem = selectOrdem.value;
+
+            let filtrados = clubes.filter(c => {
+                const bateTexto = c.nome.toLowerCase().includes(termo) ||
+                    c.rival.toLowerCase().includes(termo) ||
+                    c.serie.toLowerCase().includes(termo);
+                const bateSaf = filtroAtual === 'todos' ||
+                    (filtroAtual === 'saf-sim' && c.saf === 'Sim') ||
+                    (filtroAtual === 'saf-nao' && c.saf === 'Não');
+                return bateTexto && bateSaf;
+            });
+
+            filtrados.sort((a, b) => {
+                if (ordem === 'torcida') return b.torcida - a.torcida;
+                if (ordem === 'socios') return b.socios - a.socios;
+                if (ordem === 'titulos') return (b.br + b.intl) - (a.br + a.intl);
+                if (ordem === 'estadio') return b.estadio - a.estadio;
+            });
+
+            corpoTabela.innerHTML = filtrados.map(c => {
+                const ehCruzeiro = c.nome === 'Cruzeiro';
+                return `
+                    <tr class="${ehCruzeiro ? 'linha-cruzeiro' : ''}">
+                        <td>
+                            <strong>${ehCruzeiro ? '★ ' : ''}${c.nome}</strong>
+                            <small class="serie-tag">${c.serie} • ${c.decada}</small>
+                        </td>
+                        <td>${formatarMilhoes(c.torcida)}</td>
+                        <td>${formatarNumero(c.socios)}</td>
+                        <td><strong>${c.br + c.intl}</strong> <small>(${c.br} BR / ${c.intl} Int)</small></td>
+                        <td>${formatarNumero(c.estadio)}</td>
+                        <td><span class="badge-saf ${c.saf === 'Sim' ? 'saf-ativo' : ''}">${c.saf === 'Sim' ? 'SAF' : 'Associativo'}</span></td>
+                        <td>${c.rival}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        inputBusca.addEventListener('input', renderizarTabela);
+        selectOrdem.addEventListener('change', renderizarTabela);
+        botoesFiltro.forEach(btn => {
+            btn.addEventListener('click', () => {
+                botoesFiltro.forEach(b => b.classList.remove('ativo'));
+                btn.classList.add('ativo');
+                filtroAtual = btn.dataset.filtro;
+                renderizarTabela();
+            });
+        });
+
+        // 2. COMPARADOR INTERATIVO CRUZEIRO VS OUTRO CLUBE
+        const selectRival = document.getElementById('select-rival');
+        const boxComparador = document.getElementById('comparador-resultado');
+        const cruzeiro = clubes.find(c => c.nome === 'Cruzeiro');
+
+        function atualizarComparador() {
+            const adversario = clubes.find(c => c.nome === selectRival.value);
+            const metricas = [
+                { label: 'Torcida', v1: cruzeiro.torcida, v2: adversario.torcida, fmt: formatarMilhoes },
+                { label: 'Sócios-Torcedores', v1: cruzeiro.socios, v2: adversario.socios, fmt: formatarNumero },
+                { label: 'Total de Títulos', v1: cruzeiro.br + cruzeiro.intl, v2: adversario.br + adversario.intl, fmt: v => v + ' títulos' },
+                { label: 'Capacidade Estádio', v1: cruzeiro.estadio, v2: adversario.estadio, fmt: formatarNumero }
+            ];
+
+            boxComparador.innerHTML = metricas.map(m => {
+                const max = Math.max(m.v1, m.v2, 1);
+                const p1 = Math.round((m.v1 / max) * 100);
+                const p2 = Math.round((m.v2 / max) * 100);
+                return `
+                    <div class="comp-item">
+                        <div class="comp-labels">
+                            <span><strong>Cruzeiro:</strong> ${m.fmt(m.v1)}</span>
+                            <span class="comp-titulo">${m.label}</span>
+                            <span><strong>${adversario.nome}:</strong> ${m.fmt(m.v2)}</span>
+                        </div>
+                        <div class="comp-track">
+                            <div class="bar-cruzeiro" style="width: ${p1}%"></div>
+                            <div class="bar-adversario" style="width: ${p2}%"></div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        selectRival.addEventListener('change', atualizarComparador);
+
+        // 3. ANIMAÇÃO DE CONTADORES E SCROLL
+        document.querySelectorAll('.contador').forEach(el => {
+            const alvo = +el.dataset.alvo;
+            let atual = 0;
+            const passo = Math.max(1, Math.ceil(alvo / 35));
+            const timer = setInterval(() => {
+                atual += passo;
+                if (atual >= alvo) {
+                    el.textContent = alvo;
+                    clearInterval(timer);
+                } else {
+                    el.textContent = atual;
+                }
+            }, 30);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('ativo');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Inicializa componentes
+        renderizarTabela();
+        atualizarComparador();
+    </script>
+
+</body>
+
+</html>
